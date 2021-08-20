@@ -1,0 +1,47 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+}
+.container {
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: black 0 0 10px 5px;
+    
+}
+
+.btn-grid {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+}
+
+.btn {
+    font-size: 30px;
+}
+
+.question {
+    font-size: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+
+
+

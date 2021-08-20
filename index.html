@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Code Quiz</title>
 </head>
+
+
+
+
+
 <body>
     
+  <div class="container">
+    <div id="question-container" class="hide"></div>
+    <div  class="question">Question: <span id="question"></span>
+    </div>
+    <div id="answer-buttons" class="btn-grid">
+        <button class="btn" id="answer1" >Answer 1</button>
+        <button class="btn" id="answer2" >Answer 2</button>
+        <button class="btn" id="answer3" >Answer 3</button>
+        <button class="btn" id="answer4" >Answer 4</button>
+    </div>
+    <div class="controls">
+        <button click='startGame()' id="start-button" class="start-button btn">Start</button>
+        <button id="next-button" class="next-button btn">Next</button>
+    </div>
+    
+</div>
 </body>
 </html>
