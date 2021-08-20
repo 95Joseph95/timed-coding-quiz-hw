@@ -1,7 +1,16 @@
 //select start button
 var startButton = document.getElementById('start-button')
 var questionContainer = document.getElementById('question')
+var answer1 = document.getElementById('answer1')
+var answer2 = document.getElementById('answer2')
+var answer3 = document.getElementById('answer3')
+var answer4 = document.getElementById('answer4')
 var score = 0;
+
+
+
+//make the start button create a question
+
 
 const myQuestions  = [
     {
@@ -59,18 +68,41 @@ answer4.innerHTML = myQuestions[0].answers.d
 
 }
 
+function userChoice() {
+    var response = window.prompt(myQuestions[i].answers)
+    if (response == myQuestions[i].correctAnswer) {
+        score++;
+        alert("Correct!");
+    }
+    else {
+        score--;
+        alert("Wrong!")
+    }
+}
+
+answer1.addEventListener("click", function() {
+    userChoice();
+})
+
+
+
+
+
+
+
+
 
 
     //first question after start click
     startButton.addEventListener("click", function() {
         //make it so i dont need to hard code the value for the myquestions array ( see line 55)
-        //look into parameters for functions
+        //look into parameters for
        displayQuestion();
     })
 
     // for (var i=0; i < myQuestions.length; i++) {
-        //     var response = window.prompt(myQuestions[i].question)
-        //     if(response == myQuestions[i].correctAnswer) {
+    //         var response = window.prompt(myQuestions[i].question)
+    //         if(response == myQuestions[i].correctAnswer) {
     //         score++;
     //         alert("correct!");
     //     }
