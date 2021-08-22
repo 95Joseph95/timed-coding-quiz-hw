@@ -68,28 +68,12 @@ answer4.innerHTML = myQuestions[0].answers.d
 
 }
 
-function userChoice() {
-    var response = window.prompt(myQuestions[i].answers)
-    if (response == myQuestions[i].correctAnswer) {
-        score++;
-        alert("Correct!");
-    }
-    else {
-        score--;
-        alert("Wrong!")
-    }
-}
 
-answer1.addEventListener("click", function() {
-    userChoice();
+document.addEventListener("click", function(e) {
+    console.log(e.target.textContent)
+    //create an if statement to check if the event target is a btn 
+    //inside if if btn compare text content of the target which is clicked btn w th correct answer of current q
 })
-
-
-
-
-
-
-
 
 
 
@@ -99,16 +83,3 @@ answer1.addEventListener("click", function() {
         //look into parameters for
        displayQuestion();
     })
-
-    // for (var i=0; i < myQuestions.length; i++) {
-    //         var response = window.prompt(myQuestions[i].question)
-    //         if(response == myQuestions[i].correctAnswer) {
-    //         score++;
-    //         alert("correct!");
-    //     }
-    //     else {
-    //         alert("Wrong!");
-    //     }
-    // }
-
-    // alert("You got " + score + "/" + myQuestions.length)
